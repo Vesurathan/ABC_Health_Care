@@ -1,0 +1,15 @@
+.login_container{
+align-items: center;
+height: 100vh;
+background-color: aqua;
+margin: 20px;
+}
+.login_part_one{
+    background-color: blueviolet;
+    height: 50vh;
+}
+
+.login_part_second{
+    background-color: blue;
+    height: 50vh;
+}
