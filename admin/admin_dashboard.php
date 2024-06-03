@@ -37,6 +37,11 @@ function delete_doctor($doctor_id, $conn)
     mysqli_query($conn, $sql);
 }
 
+function delete_appointment($id, $conn){
+  $sql = "DELETE FROM appointments WHERE id = $id";
+  mysqli_query($conn, $sql);
+}
+
 // Function to retrieve patient details
 function get_patient_details($conn)
 {
@@ -226,6 +231,8 @@ $appointments = get_appointment_details($conn);
                           <td class="border-bottom-0"><?php echo $appointment['phone']; ?></td>
                           <td class="border-bottom-0">
                             <a href="edit_appointment.php?id=<?php echo $appointment['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                            <!-- <a href="delete_appointment.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this appointment?');">Delete</a> -->
+
                             <a href="?action=delete&type=appointment&id=<?php echo $appointment['id']; ?>" class="btn btn-danger btn-sm">Delete</a>
                           </td>
                         </tr>

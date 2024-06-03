@@ -7,10 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $doctor_id = $_POST['doctor_id'];
     $appointment_date = $_POST['appointment_date'];
     $message = $_POST['message'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
 
-    $sql = "INSERT INTO appointments (patient_name, doctor_id, appointment_date, message) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO appointments (patient_name, doctor_id, appointment_date, message,email,phone) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("siss", $patient_name, $doctor_id, $appointment_date, $message);
+    $stmt->bind_param("sissss", $patient_name, $doctor_id, $appointment_date, $message,$email,$phone,);
 
     if ($stmt->execute()) {
         echo "Appointment booked successfully!";
@@ -61,6 +63,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                   <div class="mb-3">
                     <label for="appointment_date" class="form-label">Appointment Date</label>
                     <input type="date" class="form-control" id="appointment_date" name="appointment_date" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Phone" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="phone" name="phone" required>
                   </div>
                   <div class="mb-3">
                     <label for="message" class="form-label">Message</label>

@@ -29,21 +29,6 @@
             <span class="spinner-rotate"></span>
         </div>
     </section>
-    <!-- HEADER -->
-    <!-- <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-5">
-                    <p>Welcome to a Professional ABC Health Care</p>
-                </div>
-                <div class="col-md-8 col-sm-7 text-align-right">
-                    <span class="phone-icon"><i class="fa fa-phone"></i> 077-148-3110</span>
-                    <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM (Mon-Fri)</span>
-                    <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></span>
-                </div>
-            </div>
-        </div>
-    </header> -->
     <!-- MENU -->
     <section class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
@@ -328,7 +313,7 @@
                 <div class="col-md-12 col-sm-12 border-top">
                     <div class="col-md-4 col-sm-6">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2018 Your Company</p>
+                            <p>Copyright &copy; 2024 Nexus Dev</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
